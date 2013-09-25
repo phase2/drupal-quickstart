@@ -37,9 +37,10 @@ the [build](.openshift/action_hooks/build) and [deploy](.openshift/action_hooks/
 Using Drush
 -----------
 
-The Drush management tool for Drupal is automatically installed. You can use it by running:
+The Drush management tool for Drupal is automatically installed
+and you can simply use it while ssh'd into your gear.
 
-    cd ${OPENSHIFT_REPO_DIR}php
+    rhc ssh drupal
     drush --help
 
 Drush has many helpful commands for managing your installation.

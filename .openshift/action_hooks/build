@@ -20,6 +20,13 @@ DRUPAL_SITE_DIR=${OPENSHIFT_DATA_DIR}sites
 
 echo
 
+# Drush settings
+cat >$OPENSHIFT_HOMEDIR/.drush/drushrc.php <<EOF
+<?php
+  \$options['uri'] = \$_ENV['OPENSHIFT_APP_DNS'];
+  \$options['root'] = \$_ENV['OPENSHIFT_REPO_DIR'].'php';
+EOF
+
 #
 # Drupal 8.x requires using Drush 6 
 # Get the latest version from drupal.org as a tarball.
