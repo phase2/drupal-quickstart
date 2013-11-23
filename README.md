@@ -7,7 +7,7 @@ just yet, but hope you will use it to test & give feedback to the Drupal Communi
 It defaults to using MySQL, so when creating the application you'll want to select 
 and install both MySQL and Cron (for running scheduled tasks). 
 
-    rhc app create drupal8 https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-php-fpm mysql cron https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-community-drush-master
+    rhc app create drupal8 https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-php-fpm mysql-5.1 cron https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-community-drush-master
 
 The first time you push changes to OpenShift, the build script
 will download the latest alpha version of Drupal 8 and
@@ -53,7 +53,7 @@ Create an account at http://openshift.redhat.com/
 
 Create a PHP 5.4 application with MySQL and Cron support and the latest Drush.
 
-    rhc app create drupal8 https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-php-fpm mysql cron https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-community-drush-master --from-code=git://github.com/phase2/drupal-quickstart.git
+    rhc app create drupal8 https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-php-fpm mysql-5.1 cron https://cartreflect-claytondev.rhcloud.com/reflect?github=phase2/openshift-community-drush-master --from-code=git://github.com/phase2/drupal-quickstart.git
 
 That's it, you can now checkout your application at:
     http://drupal-$yournamespace.rhcloud.com
